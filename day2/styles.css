@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.search-box {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#search-box {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.search-icon,
+.direction-icon,
+.current-location {
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.search-icon:hover,
+.direction-icon:hover,
+.current-location:hover {
+    transform: scale(1.1);
+}
+
+#map {
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+}
+
+/* Position zoom controls at bottom right */
+.leaflet-control-zoom {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    font-size: 18px;
+}
+
