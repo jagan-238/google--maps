@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaflet Route Navigation</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <h2><i class="fa-solid fa-map"></i> Navigation</h2>
+        <div id="start" onclick="selectLocation('start')">Start: <span class="small-btn">📍 Set</span></div>
+        <div id="end" onclick="selectLocation('end')">End: <span class="small-btn">📍 Set</span></div>
+        <div class="button-group">
+            <button id="route-btn" onclick="calculateRoute()"><i class="fa-solid fa-route"></i></button>
+            <button id="start-audio" onclick="startAudio()"><i class="fa-solid fa-play"></i></button>
+            <button id="stop-audio" onclick="stopAudio()"><i class="fa-solid fa-stop"></i></button>
+            <button id="clear-route" onclick="clearRoute()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine/dist/leaflet-routing-machine.js"></script>
+    <script src="script1.js"></script>
+
+</body>
+</html>
