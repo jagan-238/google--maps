@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved and recents</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <input type="text" id="search" placeholder="Search location...">
+        <button id="save-btn"><i class="fas fa-bookmark"></i> Save</button>
+
+        <div class="menu">
+            <h3><i class="fas fa-map-marker-alt"></i> Saved Locations</h3>
+            <ul id="saved-list">
+                <li><i class="fas fa-bookmark"></i> No saved locations</li>
+            </ul>
+        </div>
+
+        <div class="menu">
+            <h3><i class="fas fa-history"></i> Recent Locations</h3>
+            <ul id="recent-list">
+                <li><i class="fas fa-clock"></i> No recent locations</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
